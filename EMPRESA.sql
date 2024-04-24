@@ -279,16 +279,29 @@ FROM CLIENTES;
 
 SELECT NOMBRES, APELLIDOPAT, APELLIDOMAT
 FROM EMPLEADOS
-WHERE CIUDAD LIKE 'Ilo';
+WHERE CIUDAD IS 'Ilo';
 
 SELECT *
 FROM PRODUCTOS
 WHERE COSTO < 100;
 
--- En la correcion, menciona el uso de DISTINCT para incluir unicamente diferentes puestos pero en los apuntes no aparece ninguna explicacion con lo que se ha dejado de este modo
+-- En la correcion, menciona el uso de DISTINCT para incluir unicamente diferentes puestos
+-- pero en los apuntes no aparece ninguna explicacion; con lo que se ha dejado asi
 SELECT PUESTO
 FROM PAGOSEMPLEADOS;
 
 SELECT *
 FROM ORDENES
-WHERE FECHA LIKE '2010-06-30';
+WHERE FECHA IS '2010-06-30';
+
+SELECT *
+FROM PAGOSEMPLEADOS
+ORDER BY SUELDO DESC;
+
+SELECT *
+FROM PAGOSEMPLEADOS
+WHERE BONO IS NULL;
+
+SELECT *
+FROM PRODUCTOS
+WHERE COSTO BETWEEN 500 AND 1000;
