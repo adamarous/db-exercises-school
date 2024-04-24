@@ -274,19 +274,21 @@ INSERT INTO ORDENES VALUES(1018, 2, 6, 5, '2010-06-30');
 
 INSERT INTO ORDENES VALUES(1019, 10, 4, 4, '2010-06-30');
 
-SELECT Empresa, Email
+SELECT EMPRESA, EMAIL
 FROM CLIENTES;
 
-SELECT Nombres, ApellidoMat, ApellidoPat
-FROM EMPLEADOS;
+SELECT NOMBRES, APELLIDOPAT, APELLIDOMAT
+FROM EMPLEADOS
+WHERE CIUDAD LIKE 'Ilo';
 
-SELECT Descripcion, Costo
+SELECT *
 FROM PRODUCTOS
-WHERE Costo < 100;
+WHERE COSTO < 100;
 
-SELECT Puesto
+-- En la correcion, menciona el uso de DISTINCT para incluir unicamente diferentes puestos pero en los apuntes no aparece ninguna explicacion con lo que se ha dejado de este modo
+SELECT PUESTO
 FROM PAGOSEMPLEADOS;
 
-SELECT Fecha
+SELECT *
 FROM ORDENES
-WHERE Fecha LIKE '2010-06-30';
+WHERE FECHA LIKE '2010-06-30';
